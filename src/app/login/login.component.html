@@ -1,0 +1,24 @@
+<div class="Login-Page">
+  <div class="Login-Card">
+    <div class="Login-Card-Title">
+      Login
+    </div>
+
+    <form class="login-form" (submit)="login(username, password)">
+      <div class="Container-Flex">
+        <input class="Login-Card-Input" required placeholder="Username" 
+          [(ngModel)]="username" name="user_name" />
+      </div>
+      <div class="Container-Flex">
+        <input class="Login-Card-Input" required placeholder="Password" 
+          [(ngModel)]='password' type="password" name="user_password" />
+      </div>
+      <div *ngIf="errorMsg" class="product-error">{{errorMsg}}</div>
+      <div class="Container-Flex">
+        <button class="Login-Button" type="submit">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
